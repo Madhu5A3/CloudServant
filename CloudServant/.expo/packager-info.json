@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 19212,
+  "expoServerNgrokUrl": "https://a9-kxr.mmk7997.cloudservant.exp.direct",
+  "packagerNgrokUrl": "https://packager.a9-kxr.mmk7997.cloudservant.exp.direct",
+  "ngrokPid": 19245,
+  "webpackServerPort": null
+}
