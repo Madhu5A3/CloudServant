@@ -4,12 +4,6 @@ import { TextInput } from 'react-native-gesture-handler';
 import UploadCard from './UploadCard';
 
 const UploadScreen = ({ navigation }) => {
-    /*const [enteredText, setOutputText] = useState('');
-
-    const handleText = setText => {
-        setOutputText(setText)
-    }*/
-    
     return (
         <View style={styles.screen}>
             <UploadCard style={styles.inputContainer}>

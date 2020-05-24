@@ -2,7 +2,6 @@ import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import UploadCard from './UploadCard';
 import { TextInput } from 'react-native-gesture-handler';
-// import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import t from 'tcomb-form-native'; // 0.6.9
 
 const Form = t.form.Form;

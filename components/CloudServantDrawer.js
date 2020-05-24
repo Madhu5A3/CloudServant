@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Image, StyleSheet } from 'react-native';
-// import BellIcon from 'react-bell-icon';
 
 class CloudServantDrawer extends Component {
     toggleDrawer = () => {
