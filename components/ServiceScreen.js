@@ -11,6 +11,7 @@ const ServiceScreen = ({ navigation }) => {
                     <Button title="CALL ME" onPress={() => navigation.navigate('CallMeScreen')}></Button>
                     <Button title="UPLOAD" onPress={() => navigation.navigate('UploadScreen')}></Button>
                     <Button title="PLACE ORDER" onPress={() => navigation.navigate('PlaceOrderScreen')}></Button>
+                    <Button title="ATTEND AT HOME" onPress={() => navigation.navigate('AttendAtHomeScreen')}></Button>
                 </View>
             </UploadCard>
         </View>
@@ -23,14 +24,13 @@ const styles = StyleSheet.create({
     },
     homeScreen: {
         flex: 1,
-        paddingTop: 20,
+        paddingTop: 10,
         alignItems: 'center',
         marginTop: 50,
         justifyContent: 'center'
     },
     textContainer: {
         fontSize: 20,
-        marginTop: 10
     },
     buttonContainer: {
         flexDirection: 'column',
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         marginVertical: 50,
-        marginTop: 100
+        marginTop: 50
     }
 })
 
