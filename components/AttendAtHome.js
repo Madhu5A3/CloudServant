@@ -2,19 +2,19 @@ import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import UploadCard from './UploadCard';
 
-const CallMeScreen = ({ navigation }) => {
+const AttendAtHome = ({ navigation }) => {
     return (
-        <View style={styles.CallMeContainer}>
+        <View style={styles.HomeContainer}>
             <UploadCard style={styles.textContainer}>
-                <Text>Your Request has been accepted, you will receive call from the agent</Text>
+                <Text>Your Agent will be Arriving Soon!!</Text>
             </UploadCard>
-            <Button title="BACK" onPress={() => navigation.navigate('ServiceScreen')} ></Button>
+            <Button title="BACK" onPress={() => navigation.navigate('ServiceScreen')}></Button>
         </View>
     );
-};
+}
 
 const styles = StyleSheet.create({
-    CallMeContainer: {
+    HomeContainer: {
         alignItems: 'center',
         marginTop: 140,
         justifyContent: 'center'
@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
         borderBottomColor: 'grey',
         borderColor: 'black'
     }
-})
+});
 
-export default CallMeScreen;
+export default AttendAtHome;

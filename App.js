@@ -12,6 +12,7 @@ import CallMeScreen from './components/CallMeScreen';
 import UploadScreen from './components/UploadScreen';
 import PlaceOrderScreen from './components/PlaceOrderScreen';
 import NotificationIconComponent from './components/NotificationIconComponent';
+import AttendAtHome from './components/AttendAtHome';
 
 const ServiceScreenStackDrawer = createStackNavigator({
   ServiceScreen: {
@@ -23,7 +24,6 @@ const ServiceScreenStackDrawer = createStackNavigator({
       headerStyle: {
         backgroundColor: '#FF4136',
       },
-      // headerRight: <BellIcon navigationProps={navigation}/>
     }),
   }
 });
@@ -31,9 +31,22 @@ const ServiceScreenStackDrawer = createStackNavigator({
 const CallMeScreenStackDrawer = createStackNavigator({
   CallMeScreen: {
     screen: CallMeScreen,
-    navigationOptions: ({navigation}) => ({
+    navigationOptions: ({ navigation }) => ({
       title: 'CallMeScreen',
-      headerStyle:{
+      headerStyle: {
+        backgroundColor: '#FF4136',
+      }
+    }),
+    headerRight: () => <NotificationIconComponent navigationProps={navigation} />,
+  }
+})
+
+const AttendAtHomeScreenStackDrawer = createStackNavigator({
+  AttendAtHomeScreen: {
+    screen: AttendAtHome,
+    navigationOptions: ({ navigation }) => ({
+      title: 'AttendAtHomeScreen',
+      headerStyle: {
         backgroundColor: '#FF4136',
       }
     }),
@@ -44,7 +57,7 @@ const CallMeScreenStackDrawer = createStackNavigator({
 const PlaceOrderScreenStackDrawer = createStackNavigator({
   PlaceOrderScreen: {
     screen: PlaceOrderScreen,
-    navigationOptions: ({navigation}) => ({
+    navigationOptions: ({ navigation }) => ({
       title: 'Place Order Screen',
       headerStyle: {
         backgroundColor: '#FF4136'
@@ -55,9 +68,9 @@ const PlaceOrderScreenStackDrawer = createStackNavigator({
 })
 
 const UploadScreenStackDrawer = createStackNavigator({
-  UploadScreen:{
+  UploadScreen: {
     screen: UploadScreen,
-    navigationOptions: ({navigation}) => ({
+    navigationOptions: ({ navigation }) => ({
       title: 'Upload Screen',
       headerStyle: {
         backgroundColor: '#FF4136',
@@ -77,23 +90,9 @@ const HomeScreenStackDrawer = createStackNavigator({
         backgroundColor: '#FF4136',
       },
       headerTintColor: '#fff',
-      // headerRight: <BellIcon navigationProps={navigation}/>
     }),
   }
 })
-/*const ScreenStackNavigator = createStackNavigator({
-  ScreenStack: {
-      screen: ServiceScreen,
-      navigationOptions: ({ navigation }) => ({
-          title: 'Service',
-          headerLeft: () => <CloudServantDrawer navigationProps={navigation} />,
-          headerStyle: {
-              backgroundColor: 'red',
-          },
-          // headerRight: <BellIcon navigationProps={navigation}/>
-      }),
-  }
-})*/
 
 const NotificationScreenStackDrawer = createStackNavigator({
   Notification: {
@@ -129,34 +128,29 @@ const CloudServantStackDrawerNavigator = createDrawerNavigator({
       drawerLabel: 'Service Label'
     }
   },
-  CallMeScreen:{
+  CallMeScreen: {
     screen: CallMeScreenStackDrawer,
     navigationOptions: {
       drawerLabel: 'Call Me Screen Label'
     }
   },
-  UploadScreen:{
+  AttendAtHome: {
+    screen: AttendAtHomeScreenStackDrawer,
+    navigationOptions: {
+      drawerLabel: 'Attend At Home Label'
+    }
+  },
+  UploadScreen: {
     screen: UploadScreenStackDrawer,
-    navigationOptions:{
+    navigationOptions: {
       drawerLabel: 'Upload Screen Label'
     }
   },
-  PlaceOrderScreen:{
+  PlaceOrderScreen: {
     screen: PlaceOrderScreenStackDrawer
   }
 },
 );
 
-/*const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row'
-  },
-  imageContainer: {
-    width: 25, height: 25, marginLeft: 5
-  }
-})*/
-
-// const App = createAppContainer(CloudServantStack);
-// export default App;
 const AppDrawer = createAppContainer(CloudServantStackDrawerNavigator);
 export default AppDrawer;
